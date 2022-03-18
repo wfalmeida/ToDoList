@@ -1,0 +1,42 @@
+<div class="container-tasks">
+    <h1>Todas as rotas</h1>
+    <div class="tasks-list">
+        {{#each tasks}}
+            {{#if this.done}}
+                <div class="tasks tasks-done">
+            {{else}}
+                <div class="tasks tasks-undone">
+            {{/if}}
+                    <p class="title-tasks">
+                        {{this.title}}
+                    </p>
+                    <div class="actions">
+                        {{#if this.done}}
+                            <form action="tasks/updateStatus/{{this.id}}" method="post">
+                                <button type="submit">
+                                    <i class="bi bi-x-square-fill icon-undone"></i>
+                                </button>
+                            </form>
+                        {{else}}
+                            <form action="tasks/updateStatus/{{this.id}}" method="post">
+                                <button type="submit">
+                                    <i class="bi bi-check-square-fill icon-done"></i>
+                                </button>
+                            </form> 
+                        {{/if}}
+                        <form action="tasks/edit/{{this.id}}" method="get">
+                            <button type="submit">
+                                <i class="bi bi-pencil-square icon-edit"></i>
+                            </button>
+                        </form> 
+                        <form action="tasks/delete/{{this.id}}" method="post">
+                            <button type="submit">
+                                <i class="bi bi-trash-fill icon-delete"></i>
+                            </button>
+                        </form>    
+                    </div>
+                </div>
+        {{/each}}
+    </div>
+</div>
+
