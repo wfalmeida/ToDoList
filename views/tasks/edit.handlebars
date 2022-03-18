@@ -3,11 +3,11 @@
     <form action="/tasks/edit/{{task.id}}" method="POST" class="form-create">
     <div class="form-control">
         <label for="title">Título:</label>
-        <input type="text" name="title" placeholder="O que você vai fazer?" value="{{task.title}}">
+        <input type="text" name="title" placeholder="What is your task title?" value="{{task.title}}">
     </div>
     <div class="form-control">
         <label for="description">Descrição:</label>
-        <textarea type="text" name="description" placeholder="O que você vai fazer?">{{task.description}}</textarea>
+        <textarea type="text" name="description" placeholder="What is your task description?">{{task.description}}</textarea>
     </div>
     <input type="submit" value="Edit" class="btn-create">
     </form>

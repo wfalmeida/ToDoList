@@ -15,7 +15,18 @@ body{
     overflow: hidden;
 }
 
-li, a, button, ul, p {
+input, textarea {
+    font-family: "Monstserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2c2929;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+li, a, button, ul, p ,label{
     font-family: "Monstserrat", sans-serif;
     font-weight: 600;
     font-size: 16px;
